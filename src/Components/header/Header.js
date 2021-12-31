@@ -1,4 +1,5 @@
 import React from "react";
+import Navigation from "./Navigation";
 
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
 
         <div>
 
-            <h1> From Header</h1>
+            <Navigation />
 
         </div>
     );

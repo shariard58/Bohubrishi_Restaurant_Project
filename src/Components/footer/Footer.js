@@ -6,7 +6,7 @@ const Footer = () => {
 
         <div>
 
-            <h1> From Footer</h1>
+
 
         </div>
     );
