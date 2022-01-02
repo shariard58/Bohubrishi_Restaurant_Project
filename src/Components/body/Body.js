@@ -1,4 +1,5 @@
 import React from "react";
+import Menu from "./Menu";
 
 
 const Body = () => {
@@ -6,7 +7,7 @@ const Body = () => {
 
         <div>
 
-
+            <Menu />
 
         </div>
     );
