@@ -16,18 +16,23 @@ const DishDetail = props => {
 
                     <CardTitle> {props.dish.name}</CardTitle>
                     <CardText>
-                        <p> {props.dish.description} </p>
-
-                        <p> {props.dish.price} </p>
-
-                        <hr />
-
-                        <LoadComments comments={props.dish.comments} />
+                        {props.dish.description}
 
 
 
 
                     </CardText>
+
+                    <CardText>
+
+
+                        Price: {props.dish.price}
+
+
+                    </CardText>
+                    <hr />
+
+                    <LoadComments comments={props.dish.comments} />
 
                 </CardBody>
             </Card>
