@@ -3,7 +3,7 @@ import Menu from "./Menu";
 import Home from "./Home";
 import Contact from "./Contact";
 import About from "./About";
-import { Route, Routes, Redirect, Navigate } from "react-router";
+import { Route, Routes, Navigate, Switch } from "react-router";
 
 
 
@@ -17,14 +17,18 @@ const Body = () => {
 
             <Routes>
 
-                <Route path="/" exact element={Home} />
+
+                <Route path="/home" exact element={Home} />
                 <Route path="/menu" exact element={<Menu />} />
-                <Route path="/contact" exact element={Contact} />
+                <Route path="/contact" exact element={<Contact />} />
                 <Route path="/about" exact element={About} />
                 <Route path="/" element={<Navigate replace to="/home" />} />
 
+
             </Routes>
-            {/* <Redirect from="/" to="/home" /> */}
+
+
+
 
         </div>
     );
