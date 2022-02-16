@@ -21,7 +21,7 @@ const Body = () => {
                 <Route path="/home" exact element={Home} />
                 <Route path="/menu" exact element={<Menu />} />
                 <Route path="/contact" exact element={<Contact />} />
-                <Route path="/about" exact element={About} />
+                <Route path="/about" exact element={<About/>} />
                 <Route path="/" element={<Navigate replace to="/home" />} />
 
 
