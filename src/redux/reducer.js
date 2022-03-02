@@ -11,9 +11,25 @@ import * as actionTypes from './actionTypes';
 
 // }
 
-const dishReducer = (dishstate = DISHES, action) => {
+const dishReducer = (dishstate = { isLoading: false, dishes: [] }, action) => {
 
     switch (action.type) {
+        case actionTypes.DISHES_LOADING:
+            return {
+                ...dishstate,
+                isLoading: true,
+                dishes: []
+
+            }
+
+        case actionTypes.LOAD_DISHES:
+            return {
+
+                ...dishstate,
+                isLoading: false,
+                dishes: action.payload
+            }
+
         default:
             return dishstate;
     }
@@ -28,7 +44,7 @@ const commentReducer = (commentState = COMMENTS, action) => {
             let comment = action.payload;
             comment.id = commentState.length;
             comment.date = new Date().toDateString();
-            console.log(comment);
+            // console.log(comment);
 
             return commentState.concat(comment);
 
